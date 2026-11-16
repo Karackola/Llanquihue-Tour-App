@@ -1,0 +1,5 @@
+Puerto Varas;25000;2.5;Trekking
+Llanquihue;18000;3.0;Canotaje
+Frutillar;35000;6.0;Camping
+Ensenada;28000;4.5;Trekking
+Puerto Octay;22000;2.0;Canotaje
