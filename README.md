@@ -1,32 +1,38 @@
-Llanquihue Tour
+Llanquihue Tour App
 
 Descripción
 
-Aplicación desarrollada en Java para gestionar tours turísticos de la agencia 
+Aplicación desarrollada en Java para gestionar tours turísticos de la agencia
 Llanquihue Tour.
 
-El programa permite leer información desde un archivo de texto, crear objetos de 
-tipo Tour, almacenarlos en una colección ArrayList y mostrar los resultados
-completos o filtrados por tipo de actividad. 
+Permite cargar tours desde un archivo de texto, almacenarlos en una colección
+ArrayList, asignar guías turísticos y mostrar o filtrar los tours por tipo de actividad.
 
-Estructura del proyecto.
+Estructura del proyecto
 
-* model: contiene la clase Tour y sys atributos.
-* data: contiene la clase GestorDatos, encargada de leer el archivo.
-* ui: contiene la clase Main, que ejercita el programa. 
-* resources: contiene el archivo Tours.txt con los datos de los tours.
+model: Contiene las clases Tour y GuiaTuristico, con sus atributos, métodos
+y validaciones.
+
+data: Contiene GestorDatos, encargada de leer el archivo y cargar los tours.
+
+ui: Contiene Main, clase principal que ejecuta el programa.
+
+resources: Contiene Tours.txt, archivo con los datos de los tours.
+
 
 Ejecución
 
-1. Abrir el proyecto en Netbeans.
-2. Verificar que el archivo Tours.txt se encuentre en src/resources
-3. Ejecutar la clase ui.Main
-4. Revisar en consola la lista completa de tours y los resultados fistrados. 
+1. Abrir el proyecto en Apache NetBeans.
+2. Verificar que Tours.txt esté en src/resources.
+3. Ejecutar la clase ui.Main.
+4. Revisar en consola la lista de tours, los guías asignados y los resultados filtrados por   actividad.
 
-Tecnologias utilizadas
+Tecnologías utilizadas
 
 * Java
 * Programación orientada a objetos
+* Composición entre clases
 * ArrayList
 * Lectura de archivos de texto
+* Manejo de excepciones con try-catch
 * Apache NetBeans

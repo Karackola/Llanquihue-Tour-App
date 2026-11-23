@@ -15,6 +15,7 @@ public class Tour {
     private int valor;
     private double duracion;
     private String tipoActividad;
+    private GuiaTuristico guia;
 
     public Tour() {
     }
@@ -29,8 +30,8 @@ public class Tour {
     
     public Tour(String ubicacion, int valor, double duracion, String tipoActividad) {
         this.ubicacion = ubicacion;
-        this.valor = valor;
-        this.duracion = duracion;
+        setValor(valor);
+        setDuracion(duracion);
         this.tipoActividad = tipoActividad;
     }
 
@@ -47,7 +48,11 @@ public class Tour {
     }
 
     public void setValor(int valor) {
-        this.valor = valor;
+        if (valor >= 0) {
+            this.valor = valor;
+        } else {
+            throw new IllegalArgumentException("El valor no puede ser negativo");
+        }
     }
 
     public double getDuracion() {
@@ -55,7 +60,11 @@ public class Tour {
     }
 
     public void setDuracion(double duracion) {
-        this.duracion = duracion;
+        if (duracion > 0 && Double.isFinite(duracion)) {
+            this.duracion = duracion;
+        } else {
+            throw new IllegalArgumentException("La duración debe ser mayor a cero");
+        }
     }
 
     public String getTipoActividad() {
@@ -65,6 +74,14 @@ public class Tour {
     public void setTipoActividad(String tipoActividad) {
         this.tipoActividad = tipoActividad;
     }
+    
+    public GuiaTuristico getGuia() {
+        return guia;
+    }
+
+    public void setGuia(GuiaTuristico guia) {
+        this.guia = guia;
+    }
 
     @Override
     public String toString() {
@@ -72,6 +89,7 @@ public class Tour {
                 + "\nUbicacion: " + ubicacion 
                 + "\nValor: $ " + valor 
                 + "\nDuracion: " + duracion + " horas"
-                + "\nTipo de Actividad: " + tipoActividad;
+                + "\nTipo de Actividad: " + tipoActividad
+                + "\nGuia: " + (guia !=null ? guia : "Sin asignar");
     } 
 }

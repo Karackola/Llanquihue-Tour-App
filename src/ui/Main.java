@@ -8,6 +8,7 @@ package ui;
 import data.GestorDatos;
 import model.Tour;
 import java.util.List;
+import model.GuiaTuristico;
 
 /**
  * Inicia el programa y muestra los tours disponibles.
@@ -28,6 +29,13 @@ public class Main{
 
     // 1. Cargar datos desde archivo
     List<Tour> tours = gestor.cargarDesdeArchivo(rutaArchivo);
+    GuiaTuristico guia = new GuiaTuristico("Pedro González", "Trekking");
+
+        for (Tour t : tours) {
+            if (t.getTipoActividad().equalsIgnoreCase("Trekking")) {
+            t.setGuia(guia);
+    }
+}
 
 
     // 2. Recorrido completo de la colección
