@@ -9,9 +9,12 @@ import data.GestorDatos;
 import model.Tour;
 import java.util.List;
 import model.GuiaTuristico;
+import data.GestorServicios;
+import model.ServicioTuristico;
 
 /**
  * Inicia el programa y muestra los tours disponibles.
+ * y los diferentes tipos de servicios turisticos.
  * 
  * @author macbook
  */
@@ -37,13 +40,12 @@ public class Main{
     }
 }
 
-
     // 2. Recorrido completo de la colección
     System.out.println("\n--- LISTA COMPLETA DE TOURS ---");
 
-    for (Tour t : tours) {
-      System.out.println(t.toString());
-        System.out.println("------------------------");
+        for (Tour t : tours) {
+            System.out.println(t.toString());
+            System.out.println("------------------------");
     }
 
     // 3. Filtrado por condición (Ejemplo: Tour del tipo Trekking)
@@ -57,6 +59,18 @@ public class Main{
                 System.out.println("----------------------------");
             }
         }
+        
+    // 4. Mostrar servicios turisticos
+        System.out.println("\n--- SERVICIOS TURISTICOS DISPONIBLES ---");
+        
+        GestorServicios gestorServicios = new GestorServicios();
+        ServicioTuristico[] servicios = gestorServicios.crearServicios();
+        
+        for (ServicioTuristico servicio : servicios) {
+            System.out.println(servicio.toString());
+            System.out.println("-----------------------------");
+        }
+        
         System.out.println("\n=================================================================");
         System.out.println("Ejecución finalizada correctamente.");
     }

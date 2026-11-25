@@ -36,3 +36,35 @@ Tecnologías utilizadas
 * Lectura de archivos de texto
 * Manejo de excepciones con try-catch
 * Apache NetBeans
+
+Semana 6 - Herencia Simple
+
+Objetivo
+
+Implementar una jerarquía de clases mediante herencia simple, reutilizando atributos y métodos comunes para representar diferentes tipos de servicios turísticos.
+
+Clases implementadas
+
+- ServicioTuristico: clase base que contiene el nombre y la duración del servicio.
+- RutaGastronomica: subclase que incorpora el número de paradas.
+- PaseoLacustre: subclase que incorpora el tipo de embarcación.
+- ExcursionCultural: subclase que incorpora el lugar histórico.
+- GestorServicios: clase encargada de crear seis instancias de prueba.
+- Main: clase actualizada para mostrar los servicios turísticos en consola.
+
+Conceptos aplicados
+
+- Herencia simple mediante extends.
+- Encapsulamiento de atributos.
+- Uso de super() en los constructores.
+- Sobreescritura del método toString().
+- Polimorfismo mediante un arreglo de la superclase.
+
+Instrucciones de ejecución
+
+1. Abrir el proyecto Llanquihue Tour App en NetBeans.
+2. Verificar que el archivo src/resources/Tours.txt esté disponible.
+3. Ejecutar la clase ui.Main o presionar F6 si está configurada como clase principal.
+4. Revisar en consola los tours disponibles y los seis servicios turísticos creados.
+
+Se mantienen las funcionalidades desarrolladas en las semanas anteriores.
